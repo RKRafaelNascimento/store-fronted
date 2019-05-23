@@ -10,12 +10,16 @@ import {
   MatOptionModule,
   MatInputModule,
   MatButtonModule,
-  MatMenuModule
+  MatMenuModule,
+  MatCardModule
 } from '@angular/material'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { FormsModule } from '@angular/forms'
+import { HomeComponent } from './components/home/home.component'
+import { ProductCardComponent } from './components/product-card/product-card.component'
+
 @NgModule({
-  declarations: [AppComponent, HeaderComponent],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, ProductCardComponent],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
@@ -25,6 +29,7 @@ import { FormsModule } from '@angular/forms'
     MatInputModule,
     MatButtonModule,
     MatMenuModule,
+    MatCardModule,
     BrowserAnimationsModule,
     FormsModule
   ],

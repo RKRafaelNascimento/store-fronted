@@ -6,4 +6,9 @@
   flex-wrap: wrap;
   background-color: #f3f4f6;
   padding-top: 15px;
+  .pagination {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 }

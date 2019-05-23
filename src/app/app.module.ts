@@ -16,11 +16,18 @@ import {
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { FormsModule } from '@angular/forms'
 import { HomeComponent } from './components/home/home.component'
-import { ProductCardComponent } from './components/product-card/product-card.component';
+import { ProductCardComponent } from './components/product-card/product-card.component'
 import { FooterComponent } from './components/footer/footer.component'
+import { NgxPaginationModule } from 'ngx-pagination'
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent, ProductCardComponent, FooterComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    HomeComponent,
+    ProductCardComponent,
+    FooterComponent
+  ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
@@ -32,7 +39,8 @@ import { FooterComponent } from './components/footer/footer.component'
     MatMenuModule,
     MatCardModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

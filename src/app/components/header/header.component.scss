@@ -1,0 +1,72 @@
+@import '../../../styles.scss';
+
+.rectangle {
+  background-color: #ffffff;
+  box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.08);
+  height: 80px;
+  display: flex;
+  .logo {
+    display: flex;
+    align-items: center;
+    width: 45%;
+  }
+  .store-title {
+    color: #35353d;
+    font-family: Roboto;
+    font-size: 53px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: left;
+    margin-left: 25px;
+    width: 40%;
+  }
+  .img-store {
+    width: 12%;
+    height: 85px;
+    margin-left: 20px;
+  }
+  .line {
+    border: 2px solid #e44e4b;
+    height: 45px;
+    margin-left: 20px;
+  }
+  .info-login {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%;
+    .img-user {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      margin-right: 9px;
+    }
+    .welcome {
+      color: #e44e4b;
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 17px;
+      text-align: left;
+      margin: 0px;
+    }
+  }
+}
+
+.category {
+  background-color: #ffffff;
+  box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.08);
+  height: 75px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .line {
+    border: 1px solid #e4dbdb;
+    margin-left: 20px;
+  }
+  .menu {
+    display: flex;
+    justify-content: center;
+  }
+}

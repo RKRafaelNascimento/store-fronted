@@ -5,10 +5,28 @@
       <span class="store-title">Store <span class="line"></span></span>
     </div>
     <div class="info-login">
-      <!-- <img class="img-user" src="../../../assets/header/avatar-notfound.png" alt="wolly" /> -->
       <div>
-        <p class="welcome">Entrar</p>
+        <span class="welcome">Login</span>
+        <span>|</span>
+        <span class="welcome">Cadastre-se</span>
       </div>
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <input
+            type="text"
+            placeholder="O que está procurando?"
+            aria-label="Number"
+            matInput
+            [formControl]="myControl"
+            [matAutocomplete]="auto"
+          />
+          <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+              {{ option }}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </form>
     </div>
   </div>
   <div class="category">

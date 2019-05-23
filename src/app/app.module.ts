@@ -13,6 +13,7 @@ import {
   MatMenuModule
 } from '@angular/material'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { FormsModule } from '@angular/forms'
 @NgModule({
   declarations: [AppComponent, HeaderComponent],
   imports: [
@@ -24,7 +25,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     MatInputModule,
     MatButtonModule,
     MatMenuModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

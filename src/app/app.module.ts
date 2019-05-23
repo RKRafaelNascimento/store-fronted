@@ -16,10 +16,11 @@ import {
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { FormsModule } from '@angular/forms'
 import { HomeComponent } from './components/home/home.component'
-import { ProductCardComponent } from './components/product-card/product-card.component'
+import { ProductCardComponent } from './components/product-card/product-card.component';
+import { FooterComponent } from './components/footer/footer.component'
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent, ProductCardComponent],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, ProductCardComponent, FooterComponent],
   imports: [
     BrowserModule,
     ReactiveFormsModule,

@@ -21,6 +21,9 @@ import { FooterComponent } from './components/footer/footer.component'
 import { NgxPaginationModule } from 'ngx-pagination'
 import { HttpClientModule } from '@angular/common/http'
 import { ProductService } from './shared/services/product.service'
+import { ROUTES } from './app.routing'
+import { RouterModule } from '@angular/router';
+import { ClientPageComponent } from './components/client-page/client-page.component'
 
 @NgModule({
   declarations: [
@@ -28,7 +31,8 @@ import { ProductService } from './shared/services/product.service'
     HeaderComponent,
     HomeComponent,
     ProductCardComponent,
-    FooterComponent
+    FooterComponent,
+    ClientPageComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +47,8 @@ import { ProductService } from './shared/services/product.service'
     BrowserAnimationsModule,
     FormsModule,
     NgxPaginationModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]

@@ -5,10 +5,16 @@
   box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.08);
   height: 80px;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  border-bottom: 2px solid #e4dbdb;
   .logo {
     display: flex;
     align-items: center;
-    width: 45%;
+    height: 60px;
+    width: 225px;
+    border-right: 4px solid #e44e4b;
   }
   .store-title {
     color: #35353d;
@@ -34,7 +40,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    width: 50%;
+    width: 360px;
     .img-user {
       width: 46px;
       height: 46px;
@@ -49,6 +55,9 @@
       line-height: 17px;
       text-align: left;
       margin: 18px;
+      &:hover {
+        color: #35353d;
+      }
     }
   }
 }

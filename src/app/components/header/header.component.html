@@ -2,13 +2,14 @@
   <div class="rectangle">
     <div class="logo">
       <img class="img-store" src="../../../assets/header/store.svg" alt="store" />
-      <span class="store-title">Store <span class="line"></span></span>
+      <span class="store-title">Store</span>
     </div>
     <div class="info-login">
       <div>
-        <span class="welcome" data-toggle="modal" data-target="#popUpWindow">Login</span>
-        <span>|</span>
-        <span class="welcome">Cadastre-se</span>
+        <span [routerLink]="['/cliente']" class="welcome">Entre ou cadastre-se</span>
+        <!-- <span class="welcome" data-toggle="modal" data-target="#popUpWindow">Login</span>
+
+        <span class="welcome">Cadastre-se</span> -->
       </div>
       <form class="example-form">
         <mat-form-field class="example-full-width">
@@ -30,9 +31,6 @@
     </div>
   </div>
   <div class="category">
-    <div>
-      <hr class="line" />
-    </div>
     <div class="menu">
       <div class="options">
         <button mat-button [matMenuTriggerFor]="menu">Informática</button>

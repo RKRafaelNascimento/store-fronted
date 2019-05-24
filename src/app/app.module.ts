@@ -22,8 +22,10 @@ import { NgxPaginationModule } from 'ngx-pagination'
 import { HttpClientModule } from '@angular/common/http'
 import { ProductService } from './shared/services/product.service'
 import { ROUTES } from './app.routing'
-import { RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router'
 import { ClientPageComponent } from './components/client-page/client-page.component'
+import { NewUserComponent } from './components/new-user/new-user.component'
+import { UserService } from './shared/services/user.service'
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { ClientPageComponent } from './components/client-page/client-page.compon
     HomeComponent,
     ProductCardComponent,
     FooterComponent,
-    ClientPageComponent
+    ClientPageComponent,
+    NewUserComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +53,7 @@ import { ClientPageComponent } from './components/client-page/client-page.compon
     HttpClientModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [ProductService],
+  providers: [ProductService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

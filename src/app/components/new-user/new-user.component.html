@@ -1,0 +1,96 @@
+<div class="content">
+  <div class="form">
+    <div class="input">
+      <p class="margin-0 numero-do-rg">E-mail</p>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Informe seu email"
+          name="email"
+          [(ngModel)]="user.email"
+          ngModel
+        />
+      </mat-form-field>
+    </div>
+    <div class="input">
+      <p class="margin-0 numero-do-rg">Senha</p>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Informe uma senha"
+          name="password"
+          [(ngModel)]="user.password"
+          ngModel
+        />
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="form">
+    <div class="input">
+      <p class="margin-0 numero-do-rg">Nome</p>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Informe seu nome"
+          name="firstName"
+          [(ngModel)]="user.firstName"
+          ngModel
+        />
+      </mat-form-field>
+    </div>
+    <div class="input">
+      <p class="margin-0 numero-do-rg">Sobrenome</p>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Informe seu sobrenome"
+          name="lastName"
+          [(ngModel)]="user.lastName"
+        />
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="form">
+    <div class="input">
+      <p class="margin-0 numero-do-rg">Rua</p>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Informe nome da sua rua"
+          name="street"
+          [(ngModel)]="user.address.street"
+        />
+      </mat-form-field>
+    </div>
+    <div class="input">
+      <p class="margin-0 numero-do-rg">Numero</p>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Informe o numero"
+          name="number"
+          [(ngModel)]="user.address.number"
+          ngModel
+        />
+      </mat-form-field>
+    </div>
+    <div class="input">
+      <p class="margin-0 numero-do-rg">Cidade</p>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Informe sua cidade"
+          name="city"
+          [(ngModel)]="user.address.city"
+          ngModel
+        />
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div (click)="createUser()" class="form register">
+    <div class="register-button">
+      <span class="text-button">Cadastrar</span>
+    </div>
+  </div>
+</div>

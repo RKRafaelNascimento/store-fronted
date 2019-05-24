@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { ProductService } from 'src/app/shared/services/product.service'
 
 @Component({
   selector: 'app-home',
@@ -6,25 +7,17 @@ import { Component, OnInit } from '@angular/core'
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  options: string[] = [
-    'One',
-    'Two',
-    'Three',
-    'Two',
-    'Three',
-    'Two',
-    'Three',
-    'Two',
-    'Three',
-    'Two',
-    'Three',
-    'Two',
-    'Three',
-    'Two',
-    'Three'
-  ]
+  products: any = []
 
-  constructor() {}
+  constructor(private productService: ProductService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getProducts()
+  }
+
+  private getProducts() {
+    this.productService.products().subscribe((res: any) => {
+      this.products = res
+    })
+  }
 }

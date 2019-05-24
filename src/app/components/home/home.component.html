@@ -1,6 +1,6 @@
 <div class="content">
-  <div *ngFor="let c of options | paginate: { itemsPerPage: 8, currentPage: p }">
-    <app-product-card></app-product-card>
+  <div *ngFor="let product of products | paginate: { itemsPerPage: 8, currentPage: p }">
+    <app-product-card [product]="product"></app-product-card>
   </div>
   <div class="pagination">
     <pagination-controls (pageChange)="p = $event" class="align-center"></pagination-controls>

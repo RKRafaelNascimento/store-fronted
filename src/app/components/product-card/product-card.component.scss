@@ -11,6 +11,7 @@
   cursor: pointer;
   display: flex;
   margin: 0 50px;
+  margin-bottom: 15px;
   flex-direction: column;
   background-color: #ffffff;
   width: 250px;
@@ -48,9 +49,10 @@
   }
   .button-card {
     background-color: #e44e4b;
-    border-radius: 8px;
-    width: 100%;
-    margin-top: 19px;
+    border-radius: 3px;
+    width: 98%;
+    margin-top: 13px;
+    padding: 3px;
     height: 25px;
     display: flex;
     justify-content: center;

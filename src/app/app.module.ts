@@ -19,6 +19,8 @@ import { HomeComponent } from './components/home/home.component'
 import { ProductCardComponent } from './components/product-card/product-card.component'
 import { FooterComponent } from './components/footer/footer.component'
 import { NgxPaginationModule } from 'ngx-pagination'
+import { HttpClientModule } from '@angular/common/http'
+import { ProductService } from './shared/services/product.service'
 
 @NgModule({
   declarations: [
@@ -40,9 +42,10 @@ import { NgxPaginationModule } from 'ngx-pagination'
     MatCardModule,
     BrowserAnimationsModule,
     FormsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

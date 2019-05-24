@@ -9,16 +9,23 @@
   <span class="line"></span>
   <div class="login-content">
     <div>
-      <label for="username">Email: </label>
-      <input type="text" id="username" name="username" />
+      <label for="email">Email: </label>
+      <input type="text" id="email" name="email" [(ngModel)]="user.email" ngModel required />
     </div>
 
     <div>
       <label for="pass">Senha: </label>
-      <input type="password" id="pass" name="password" minlength="8" required />
+      <input
+        type="password"
+        id="pass"
+        name="password"
+        [(ngModel)]="user.password"
+        ngModel
+        required
+      />
     </div>
 
-    <div class="register-button">
+    <div (click)="authenticate()" class="register-button">
       <span class="text-button">Login</span>
     </div>
   </div>

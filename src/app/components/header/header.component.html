@@ -1,71 +1,36 @@
 <nav class="navbar navbar-light bg-light">
   <div class="rectangle">
-    <div class="logo">
+    <div [routerLink]="['/']" class="logo">
       <img class="img-store" src="../../../assets/header/store.svg" alt="store" />
       <span class="store-title">Store</span>
     </div>
     <div class="info-login">
-      <div>
+      <div *ngIf="isLoggedIn === false">
         <span [routerLink]="['/cliente']" class="welcome">Entre ou cadastre-se</span>
-        <!-- <span class="welcome" data-toggle="modal" data-target="#popUpWindow">Login</span>
-
-        <span class="welcome">Cadastre-se</span> -->
       </div>
-      <form class="example-form">
-        <mat-form-field class="example-full-width">
-          <input
-            type="text"
-            placeholder="O que está procurando?"
-            aria-label="Number"
-            matInput
-            [formControl]="myControl"
-            [matAutocomplete]="auto"
-          />
-          <mat-autocomplete #auto="matAutocomplete">
-            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-              {{ option }}
-            </mat-option>
-          </mat-autocomplete>
-        </mat-form-field>
-      </form>
+      <div *ngIf="isLoggedIn === true">
+        <span class="welcome">Bem Vindo {{ customerData?.name }}</span>
+
+        <span>|</span>
+
+        <a href="/" class="welcome" (click)="logout()">Sair</a>
+      </div>
     </div>
   </div>
   <div class="category">
     <div class="menu">
-      <div class="options">
-        <button mat-button [matMenuTriggerFor]="menu">Informática</button>
-        <mat-menu #menu="matMenu">
-          <button mat-menu-item>Item 1</button>
-          <button mat-menu-item>Item 2</button>
-        </mat-menu>
-      </div>
+      <div class="options"><button mat-button [matMenuTriggerFor]="menu">Informática</button></div>
       <div class="options">
         <button mat-button [matMenuTriggerFor]="menu">Eletrodomésticos</button>
-        <mat-menu #menu="matMenu">
-          <button mat-menu-item>Item 1</button>
-          <button mat-menu-item>Item 2</button>
-        </mat-menu>
       </div>
       <div class="options">
         <button mat-button [matMenuTriggerFor]="menu">Móveis</button>
-        <mat-menu #menu="matMenu">
-          <button mat-menu-item>Item 1</button>
-          <button mat-menu-item>Item 2</button>
-        </mat-menu>
       </div>
       <div class="options">
         <button mat-button [matMenuTriggerFor]="menu">Celulares</button>
-        <mat-menu #menu="matMenu">
-          <button mat-menu-item>Item 1</button>
-          <button mat-menu-item>Item 2</button>
-        </mat-menu>
       </div>
       <div class="options">
         <button mat-button [matMenuTriggerFor]="menu">Saldão</button>
-        <mat-menu #menu="matMenu">
-          <button mat-menu-item>Item 1</button>
-          <button mat-menu-item>Item 2</button>
-        </mat-menu>
       </div>
     </div>
   </div>

@@ -40,7 +40,7 @@ export class NewUserComponent implements OnInit {
         'Verifique se todos os campos foram preenchidos!',
         'warning'
       )
-
+    console.log(this.user)
     this.userService.createUser(this.user).subscribe((res: any) => {
       swal('Pronto!', 'Cadastrado com sucesso!', 'success').then(() => {
         this.router.navigate(['cliente'])

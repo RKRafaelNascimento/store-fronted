@@ -1,29 +1,25 @@
 import { Component, OnInit } from '@angular/core'
-import { FormGroup, FormControl } from '@angular/forms'
-import { Observable } from 'rxjs'
-import { map, startWith } from 'rxjs/operators'
-
+import { Router } from '@angular/router'
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  myControl = new FormControl()
-  options: string[] = ['One', 'Two', 'Three']
-  filteredOptions: Observable<string[]>
-  constructor() {}
+  isLoggedIn = false
+  customerData: any
+
+  constructor(private router: Router) {}
 
   ngOnInit() {
-    this.filteredOptions = this.myControl.valueChanges.pipe(
-      startWith(''),
-      map(value => this._filter(value))
-    )
+    if (localStorage.getItem('customerData')) {
+      this.isLoggedIn = true
+      this.customerData = JSON.parse(localStorage.getItem('customerData'))
+      console.log(this.customerData)
+    }
   }
 
-  private _filter(value: string): string[] {
-    const filterValue = value.toLowerCase()
-
-    return this.options.filter(option => option.toLowerCase().includes(filterValue))
+  logout() {
+    localStorage.removeItem('customerData')
   }
 }

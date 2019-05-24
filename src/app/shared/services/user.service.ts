@@ -11,4 +11,8 @@ export class UserService {
   public createUser(user): Observable<any> {
     return this.http.post<any>(`${this.url}/user`, user)
   }
+
+  public authentication(user): Observable<any> {
+    return this.http.post<any>(`${this.url}/auth`, user)
+  }
 }

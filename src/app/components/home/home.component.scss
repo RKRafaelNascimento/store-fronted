@@ -1,0 +1,15 @@
+.content {
+  width: 100%;
+  // height: calc(100% - 214px);
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  background-color: #f3f4f6;
+  padding-top: 15px;
+  flex: 1;
+  .pagination {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}

@@ -1,0 +1,32 @@
+<div class="content">
+  <div class="form-content">
+    <div class="register">
+      <div [routerLink]="['/cadastro']" class="register-button">
+        <span class="text-button">Cadastrar</span>
+      </div>
+    </div>
+  </div>
+  <span class="line"></span>
+  <div class="login-content">
+    <div>
+      <label for="email">Email: </label>
+      <input type="text" id="email" name="email" [(ngModel)]="user.email" ngModel required />
+    </div>
+
+    <div>
+      <label for="pass">Senha: </label>
+      <input
+        type="password"
+        id="pass"
+        name="password"
+        [(ngModel)]="user.password"
+        ngModel
+        required
+      />
+    </div>
+
+    <div (click)="authenticate()" class="register-button">
+      <span class="text-button">Login</span>
+    </div>
+  </div>
+</div>

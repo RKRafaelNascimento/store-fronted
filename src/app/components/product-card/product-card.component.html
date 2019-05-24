@@ -1,0 +1,20 @@
+<!-- <div class="content-card"> -->
+<div *ngIf="product" class="rectangle">
+  <div class="container-image">
+    <img *ngIf="product.image" class="bitimage" [src]="product.image" alt="" />
+    <img
+      *ngIf="!product.image"
+      class="bitimage"
+      src="../../../assets/product-card/product-notfound.png"
+      alt=""
+    />
+  </div>
+  <div class="footer-card">
+    <span>{{ product.name | slice: 0:15 }}</span>
+    <span class="price-card">Preço: {{ product.price | currency: 'BRL':true }}</span>
+    <div class="button-card">
+      <span class="text-card">Ver Detalhes</span>
+    </div>
+  </div>
+</div>
+<!-- </div> -->

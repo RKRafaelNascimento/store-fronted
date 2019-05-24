@@ -1,0 +1,37 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="rectangle">
+    <div [routerLink]="['/']" class="logo">
+      <img class="img-store" src="../../../assets/header/store.svg" alt="store" />
+      <span class="store-title">Store</span>
+    </div>
+    <div class="info-login">
+      <div *ngIf="isLoggedIn === false">
+        <span [routerLink]="['/cliente']" class="welcome">Entre ou cadastre-se</span>
+      </div>
+      <div *ngIf="isLoggedIn === true">
+        <span class="welcome">Bem Vindo {{ customerData?.name }}</span>
+
+        <span>|</span>
+
+        <a href="/" class="welcome" (click)="logout()">Sair</a>
+      </div>
+    </div>
+  </div>
+  <div class="category">
+    <div class="menu">
+      <div class="options"><button mat-button [matMenuTriggerFor]="menu">Informática</button></div>
+      <div class="options">
+        <button mat-button [matMenuTriggerFor]="menu">Eletrodomésticos</button>
+      </div>
+      <div class="options">
+        <button mat-button [matMenuTriggerFor]="menu">Móveis</button>
+      </div>
+      <div class="options">
+        <button mat-button [matMenuTriggerFor]="menu">Celulares</button>
+      </div>
+      <div class="options">
+        <button mat-button [matMenuTriggerFor]="menu">Saldão</button>
+      </div>
+    </div>
+  </div>
+</nav>
